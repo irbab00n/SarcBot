@@ -1,0 +1,26 @@
+{
+  "name": "sarcbot",
+  "version": "1.0.0",
+  "description": "A Discord Bot for music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/uws": "^11.149.1",
+    "bufferutil": "^4.0.1",
+    "discord.js": "^11.5.1",
+    "erlpack": "discordapp/erlpack",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^2.5.0",
+    "node-opus": "^0.3.2",
+    "opusscript": "0.0.6",
+    "sodium": "^3.0.2",
+    "ytdl-core": "^0.29.3",
+    "ytdl-core-discord": "^1.0.3",
+    "zlib-sync": "^0.1.4",
+    "zucc": "^0.1.2"
+  }
+}
