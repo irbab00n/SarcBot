@@ -5,11 +5,15 @@
 // Click on the 'make an app' page, and this is where all of our developer code lives
 // However, since it is tied to my personal email, I will not be sharing this info
 const Discord = require('discord.js');
-// "Bring in" the defined prefix and token from our configuration file
-const {
-  prefix,
-  token
-} = require('./config.json');
+// "Bring in" the defined prefix from our configuration file
+const { prefix } = require('./config.json');
+const token = process.env.DISCORD_BOT_KEY || null;
+
+const ERR_NO_DISCORD_BOT_KEY = 'No DISCORD_BOT_KEY was found in the environment variables.';
+
+if (token === null) {
+  throw new Error(ERR_NO_DISCORD_BOT_KEY);
+}
 // "Bring in" the YouTube Downloader module that will allow us to connect to YouTube and 
 // get our songs to play!
 const ytdl = require('ytdl-core');
